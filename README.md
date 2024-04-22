@@ -1,2 +1,2 @@
 # stmo.github.io
-STMO Website
+STMO Dashboard Website
