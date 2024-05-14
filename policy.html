@@ -31,40 +31,34 @@
             <div class="header-logo"><a class="d-flex" href="index.html"><img alt="STMO" src="assets/imgs/page/dashboard/bpsu-logo.png"></a></div>
             <div class="header-logo"><a class="d-flex" href="index.html"><img alt="STMO" src="assets/imgs/page/dashboard/stmo-logo.png"></a></div>
           </div>
+          
+          
           <div class="header-search"> 
-            <div class="box-search"> 
-              <form action="">
-                <input class="form-control input-search" type="text" name="keyword" placeholder="Search">
-              </form>
-            </div>
-          </div>
-          <div class="header-menu d-none d-md-block">
-            <ul> 
-              <li><a href="index.html">Home </a></li>
-              <li> <a href="about.html">About </a></li>
-              <li> <a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div class="header-right">
-            <div class="block-signin">
-              <div class="dropdown d-inline-block"><a class="btn btn-notify" id="dropdownNotify" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static"></a>
-                <ul class="dropdown-menu dropdown-menu-light dropdown-menu-end" aria-labelledby="dropdownNotify">
-                  <li><a class="dropdown-item active" href="#">10 notifications</a></li>
-                  <li><a class="dropdown-item" href="#">12 messages</a></li>
-                  <li><a class="dropdown-item" href="#">20 replies</a></li>
-                </ul>
-              </div>
-              <div class="member-login"><img alt="" src="assets/imgs/page/dashboard/profile.png">
-                <div class="info-member"> <strong class="color-brand-1">STMO Admin</strong>
-                  <div class="dropdown"><a class="font-xs color-text-paragraph-2 icon-down" id="dropdownProfile" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">Super Admin</a>
-                    <ul class="dropdown-menu dropdown-menu-light dropdown-menu-end" aria-labelledby="dropdownProfile">
-                      <li><a class="dropdown-item" href="login.html">Logout</a></li>
-                    </ul>
-                  </div>
+                <div class="box-search"> 
+                  <form action="">
+                    <input class="form-control input-search" type="text" name="keyword" placeholder="Search">
+                  </form>
                 </div>
               </div>
+          
+          <div class="header-right">
+            <div class="block-signin">
+              
+            
+              
+
+              <div class="header-menu d-none d-md-block">
+                <ul> 
+                  <li><a href="index.html">Home </a></li>
+                  <li> <a href="about.html">About </a></li>
+                  <li> <a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+
             </div>
           </div>
+          
+
         </div>
       </div>
     </header>
@@ -97,11 +91,11 @@
               </nav>
             </div>
             <div class="mobile-account">
-              <h6 class="mb-10">Your Account</h6>
+              <!--<h6 class="mb-10">Your Account</h6>
               <ul class="mobile-menu font-heading">
                 <li><a href="login.html">Sign Out</a></li>
               </ul>
-              <div class="mb-15 mt-15"> </div>
+              <div class="mb-15 mt-15"> </div>-->
             </div>
             <div class="site-copyright">Copyright 2024 &copy; BPSU STMO. <br>All Rights Reserved.</div>
           </div>
@@ -150,13 +144,13 @@
             <div class="card-style-3">
               <div class="card-image"><img src="assets/imgs/page/dashboard/edd.png" alt="BPSU STMO" style="border: 1px solid black; "></div>
               <div class="card-title" style="width: 100%!important;line-height: 15px;"> 
-                <h7>Edd Matthew G. Austria</h7><br><span class="job-position">Strategic Communication Officer</span>
+                <h7>Mr. Edd Matthew G. Austria</h7><br><span class="job-position">Strategic Communication Officer</span>
               </div>
             </div>
             <div class="card-style-3">
               <div class="card-image"><img src="assets/imgs/page/dashboard/elisa.png" alt="BPSU STMO" style="border: 1px solid black; "></div>
               <div class="card-title" style="width: 100%!important;line-height: 15px;"> 
-                <h7>Elisa B. Flores</h7><br><span class="job-position">Initiative Manager</span>
+                <h7>Ms. Elisa B. Flores</h7><br><span class="job-position">Initiative Manager</span>
               </div>
             </div>
           </div>
@@ -182,14 +176,165 @@
               <div class="container"> 
                 <div class="panel-white mb-30">
                   <div class="box-padding">               
-                    <div class="login-register"> 
-                      <div class="row login-register-cover pb-250">
-                        <div class="col-lg-4 col-md-6 col-sm-12 mx-auto">
+                   
+                      <div class="row">
+                        <div class="col-lg-8 col-md-6 col-sm-12 mx-auto">
                           
+                          
+                            <!-- Styles -->
+                                      <style>
+                                      #chartdiv {
+                                        width: 100%;
+                                        height: 500px;
+                                      }
+                                      </style>
+
+                                      <!-- Resources -->
+                                      <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+                                      <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+                                      <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+                                      <!-- Chart code -->
+                                      <script>
+                                      am5.ready(function() {
+
+                                      // Create root element
+                                      // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+                                      var root = am5.Root.new("chartdiv");
+
+                                      // Set themes
+                                      // https://www.amcharts.com/docs/v5/concepts/themes/
+                                      root.setThemes([
+                                        am5themes_Animated.new(root)
+                                      ]);
+
+                                      // Create chart
+                                      // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
+                                      var chart = root.container.children.push(
+                                        am5percent.PieChart.new(root, {
+                                          endAngle: 270
+                                        })
+                                      );
+
+                                      // Create series
+                                      // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
+                                      var series = chart.series.push(
+                                        am5percent.PieSeries.new(root, {
+                                          valueField: "value",
+                                          categoryField: "category",
+                                          endAngle: 270
+                                        })
+                                      );
+
+                                      series.states.create("hidden", {
+                                        endAngle: -90
+                                      });
+
+                                      // Set data
+                                      // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
+                                      series.data.setAll([{
+                                        category: "Lithuania",
+                                        value: 501.9
+                                      }, {
+                                        category: "Czechia",
+                                        value: 301.9
+                                      }, {
+                                        category: "Ireland",
+                                        value: 201.1
+                                      }, {
+                                        category: "Germany",
+                                        value: 165.8
+                                      }, {
+                                        category: "Australia",
+                                        value: 139.9
+                                      }, {
+                                        category: "Austria",
+                                        value: 128.3
+                                      }, {
+                                        category: "UK",
+                                        value: 99
+                                      }]);
+
+                                      series.appear(1000, 100);
+
+                                      }); // end am5.ready()
+                                      </script>
+
+                                      <!-- HTML -->
+                                      <div id="chartdiv"></div>
+
+                                      <script type="text/javascript">
+                                        /* Imports */
+                                                import am5index from "@amcharts/amcharts5/index";
+                                                import am5percent from "@amcharts/amcharts5/percent";
+                                                import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
+
+                                                /* Chart code */
+                                                // Create root element
+                                                // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+                                                let root = am5.Root.new("chartdiv");
+
+                                                // Set themes
+                                                // https://www.amcharts.com/docs/v5/concepts/themes/
+                                                root.setThemes([
+                                                  am5themes_Animated.new(root)
+                                                ]);
+
+                                                // Create chart
+                                                // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
+                                                let chart = root.container.children.push(
+                                                  am5percent.PieChart.new(root, {
+                                                    endAngle: 270
+                                                  })
+                                                );
+
+                                                // Create series
+                                                // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
+                                                let series = chart.series.push(
+                                                  am5percent.PieSeries.new(root, {
+                                                    valueField: "value",
+                                                    categoryField: "category",
+                                                    endAngle: 270
+                                                  })
+                                                );
+
+                                                series.states.create("hidden", {
+                                                  endAngle: -90
+                                                });
+
+                                                // Set data
+                                                // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
+                                                series.data.setAll([{
+                                                  category: "Lithuania",
+                                                  value: 501.9
+                                                }, {
+                                                  category: "Czechia",
+                                                  value: 301.9
+                                                }, {
+                                                  category: "Ireland",
+                                                  value: 201.1
+                                                }, {
+                                                  category: "Germany",
+                                                  value: 165.8
+                                                }, {
+                                                  category: "Australia",
+                                                  value: 139.9
+                                                }, {
+                                                  category: "Austria",
+                                                  value: 128.3
+                                                }, {
+                                                  category: "UK",
+                                                  value: 99
+                                                }]);
+
+                                                series.appear(1000, 100);
+
+                                      </script>
+                        
                           
                         </div>
                       </div>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -197,51 +342,7 @@
           </div>
         </div>
         
-        <div class="modal fade" id="ModalApplyJobForm" tabindex="-1" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content apply-job-form">
-              <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-              <div class="modal-body pl-30 pr-30 pt-50">
-                <div class="text-center">
-                  <p class="font-sm text-brand-2">Job Application </p>
-                  <h2 class="mt-10 mb-5 text-brand-1 text-capitalize">Start your career today</h2>
-                  <p class="font-sm text-muted mb-30">Please fill in your information and send it to the employer.                   </p>
-                </div>
-                <form class="login-register text-start mt-20 pb-30" action="#">
-                  <div class="form-group">
-                    <label class="form-label" for="input-1">Full Name *</label>
-                    <input class="form-control" id="input-1" type="text" required="" name="fullname" placeholder="Steven Job">
-                  </div>
-                  <div class="form-group">
-                    <label class="form-label" for="input-2">Email *</label>
-                    <input class="form-control" id="input-2" type="email" required="" name="emailaddress" placeholder="stevenjob@gmail.com">
-                  </div>
-                  <div class="form-group">
-                    <label class="form-label" for="number">Contact Number *</label>
-                    <input class="form-control" id="number" type="text" required="" name="phone" placeholder="(+01) 234 567 89">
-                  </div>
-                  <div class="form-group">
-                    <label class="form-label" for="des">Description</label>
-                    <input class="form-control" id="des" type="text" required="" name="Description" placeholder="Your description...">
-                  </div>
-                  <div class="form-group">
-                    <label class="form-label" for="file">Upload Resume</label>
-                    <input class="form-control" id="file" name="resume" type="file">
-                  </div>
-                  <div class="login_footer form-group d-flex justify-content-between">
-                    <label class="cb-container">
-                      <input type="checkbox"><span class="text-small">Agree our terms and policy</span><span class="checkmark"></span>
-                    </label><a class="text-muted" href="page-contact.html">Lean more</a>
-                  </div>
-                  <div class="form-group">
-                    <button class="btn btn-default hover-up w-100" type="submit" name="login">Apply Job</button>
-                  </div>
-                  <div class="text-muted text-center">Do you need support? <a href="page-contact.html">Contact Us</a></div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+        
         <footer class="footer mt-20">
           <div class="container">
             <div class="box-footer">

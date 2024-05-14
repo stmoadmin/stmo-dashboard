@@ -1352,7 +1352,7 @@ h6,
   overflow: hidden;
   margin-bottom: 24px;
   position: relative;
-  background: #F8FAFF;
+  *background: #F8FAFF;*/
 }
 .card-grid-2 i {
   font-size: 20px;

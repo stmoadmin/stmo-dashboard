@@ -15,6 +15,139 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/template/favicon.ico">
     <link href="assets/css/style.css?version=4.1" rel="stylesheet">
     <title>Homepage - BPSU STMO</title>
+    <!-- Styles -->
+                                      <style>
+                                      #chartdiv {
+                                        width: 100%;
+                                        height: 500px;
+                                      }
+                                      </style>
+
+                                      <!-- Resources -->
+                                      <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+                                      <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+                                      <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+                                      <!-- Chart code -->
+                                      <script>
+                                      am5.ready(function() {
+
+                                      // Create root element
+                                      // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+                                      var root = am5.Root.new("chartdiv");
+
+                                      // Set themes
+                                      // https://www.amcharts.com/docs/v5/concepts/themes/
+                                      root.setThemes([
+                                        am5themes_Animated.new(root)
+                                      ]);
+
+                                      // Create chart
+                                      // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
+                                      var chart = root.container.children.push(
+                                        am5percent.PieChart.new(root, {
+                                          endAngle: 270
+                                        })
+                                      );
+
+                                      // Create series
+                                      // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
+                                      var series = chart.series.push(
+                                        am5percent.PieSeries.new(root, {
+                                          valueField: "value",
+                                          categoryField: "category",
+                                          endAngle: 270
+                                        })
+                                      );
+
+                                      series.states.create("hidden", {
+                                        endAngle: -90
+                                      });
+
+                                      // Set data
+                                      // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
+                                      series.data.setAll([{
+                                                  category: "COLLEGES",
+                                                  value: 2.07
+                                                }, {
+                                                  category: "OPRES",
+                                                  value: 2.04
+                                                }, {
+                                                  category: "OVPAF",
+                                                  value: 3.19
+                                                }, {
+                                                  category: "OVPAA",
+                                                  value: 3.03
+                                                }, {
+                                                  category: "OVPRET",
+                                                  value: 3.02
+                                                }]);
+
+                                      series.appear(1000, 100);
+
+                                      }); // end am5.ready()
+                                      </script>
+            <script type="text/javascript">
+                                        /* Imports */
+                                                import am5index from "@amcharts/amcharts5/index";
+                                                import am5percent from "@amcharts/amcharts5/percent";
+                                                import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
+
+                                                /* Chart code */
+                                                // Create root element
+                                                // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+                                                let root = am5.Root.new("chartdiv");
+
+                                                // Set themes
+                                                // https://www.amcharts.com/docs/v5/concepts/themes/
+                                                root.setThemes([
+                                                  am5themes_Animated.new(root)
+                                                ]);
+
+                                                // Create chart
+                                                // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
+                                                let chart = root.container.children.push(
+                                                  am5percent.PieChart.new(root, {
+                                                    endAngle: 270
+                                                  })
+                                                );
+
+                                                // Create series
+                                                // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
+                                                let series = chart.series.push(
+                                                  am5percent.PieSeries.new(root, {
+                                                    valueField: "value",
+                                                    categoryField: "category",
+                                                    endAngle: 270
+                                                  })
+                                                );
+
+                                                series.states.create("hidden", {
+                                                  endAngle: -90
+                                                });
+
+                                                // Set data
+                                                // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
+                                                series.data.setAll([{
+                                                  category: "COLLEGES",
+                                                  value: 2.07
+                                                }, {
+                                                  category: "OPRES",
+                                                  value: 2.04
+                                                }, {
+                                                  category: "OVPAF",
+                                                  value: 3.19
+                                                }, {
+                                                  category: "OVPAA",
+                                                  value: 3.03
+                                                }, {
+                                                  category: "OVPRET",
+                                                  value: 3.02
+                                                }]);
+
+                                                series.appear(1000, 100);
+
+                                      </script>
   </head>
   <body>
     <div id="preloader-active">
@@ -88,11 +221,11 @@
               </nav>
             </div>
             <div class="mobile-account">
-              <h6 class="mb-10">Your Account</h6>
+              <!--<h6 class="mb-10">Your Account</h6>
               <ul class="mobile-menu font-heading">
                 <li><a href="login.html">Sign Out</a></li>
               </ul>
-              <div class="mb-15 mt-15"> </div>
+              <div class="mb-15 mt-15"> </div>-->
             </div>
             <div class="site-copyright">Copyright 2024 &copy; BPSU STMO. <br>All Rights Reserved.</div>
           </div>
@@ -141,13 +274,13 @@
             <div class="card-style-3">
               <div class="card-image"><img src="assets/imgs/page/dashboard/edd.png" alt="BPSU STMO" style="border: 1px solid black; "></div>
               <div class="card-title" style="width: 100%!important;line-height: 15px;"> 
-                <h7>Edd Matthew G. Austria</h7><br><span class="job-position">Strategic Communication Officer</span>
+                <h7>Mr. Edd Matthew G. Austria</h7><br><span class="job-position">Strategic Communication Officer</span>
               </div>
             </div>
             <div class="card-style-3">
               <div class="card-image"><img src="assets/imgs/page/dashboard/elisa.png" alt="BPSU STMO" style="border: 1px solid black; "></div>
               <div class="card-title" style="width: 100%!important;line-height: 15px;"> 
-                <h7>Elisa B. Flores</h7><br><span class="job-position">Initiative Manager</span>
+                <h7>Ms. Elisa B. Flores</h7><br><span class="job-position">Initiative Manager</span>
               </div>
             </div>
           </div>
@@ -168,54 +301,66 @@
           </div>
         </div>
         <div class="row"> 
-          <div class="col-xxl-8 col-xl-7 col-lg-7">
+          <div class="col-xxl-12 col-xl-12 col-lg-12">
             <div class="section-box">
               <div class="row"> 
-                <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-4 col-sm-6"> 
-                  <div class="card-style-1 hover-up">
-                    <div class="card-image"> <img src="assets/imgs/page/dashboard/computer.svg" alt="STMO"></div>
-                    <div class="card-info"> 
-                      <div class="card-title">
-                        <h3>1568<span class="font-sm status up">25<span>%</span></span>
-                        </h3>
-                      </div>
-                      <p class="color-text-paragraph-2">Budget Office</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-4 col-sm-6">
-                  <div class="card-style-1 hover-up">
-                    <div class="card-image"> <img src="assets/imgs/page/dashboard/bank.svg" alt="STMO"></div>
-                    <div class="card-info"> 
-                      <div class="card-title">
-                        <h3>284<span class="font-sm status up">5<span>%</span></span>
-                        </h3>
-                      </div>
-                      <p class="color-text-paragraph-2">Health Services Unit</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-4 col-sm-6">
+                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6"> 
                   <div class="card-style-1 hover-up">
                     <div class="card-image"> <img src="assets/imgs/page/dashboard/lamp.svg" alt="STMO"></div>
                     <div class="card-info"> 
                       <div class="card-title">
-                        <h3>136<span class="font-sm status up">12<span>%</span></span>
+                        <h3>10<span class="font-sm status up">4.21-5.00<span></span></span>
                         </h3>
                       </div>
-                      <p class="color-text-paragraph-2">University Registrar</p>
+                      <p class="color-text-paragraph-2">Outstanding</p>
                     </div>
                   </div>
                 </div>
-                <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-4 col-sm-6">
+                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
                   <div class="card-style-1 hover-up">
-                    <div class="card-image"> <img src="assets/imgs/page/dashboard/headphone.svg" alt="STMO"></div>
+                    <div class="card-image"> <img src="assets/imgs/page/dashboard/lamp.svg" alt="STMO"></div>
                     <div class="card-info"> 
                       <div class="card-title">
-                        <h3>985<span class="font-sm status up">5<span>%</span></span>
+                        <h3>29<span class="font-sm status up">3.41-4.20<span></span></span>
                         </h3>
                       </div>
-                      <p class="color-text-paragraph-2">Research Center</p>
+                      <p class="color-text-paragraph-2">Very Satisfactory</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                  <div class="card-style-1 hover-up">
+                    <div class="card-image"> <img src="assets/imgs/page/dashboard/lamp.svg" alt="STMO"></div>
+                    <div class="card-info"> 
+                      <div class="card-title">
+                        <h3>4<span class="font-sm status up">2.61-3.40<span></span></span>
+                        </h3>
+                      </div>
+                      <p class="color-text-paragraph-2">Satisfactory</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                  <div class="card-style-1 hover-up">
+                    <div class="card-image"> <img src="assets/imgs/page/dashboard/doc.svg" alt="STMO"></div>
+                    <div class="card-info"> 
+                      <div class="card-title">
+                        <h3>5<span class="font-sm status down">1.81-3.40<span></span></span>
+                        </h3>
+                      </div>
+                      <p class="color-text-paragraph-2">Unsatisfactory</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                  <div class="card-style-1 hover-up">
+                    <div class="card-image"> <img src="assets/imgs/page/dashboard/doc.svg" alt="STMO"></div>
+                    <div class="card-info"> 
+                      <div class="card-title">
+                        <h3>16<span class="font-sm status down">1.00-1.80<span></span></span>
+                        </h3>
+                      </div>
+                      <p class="color-text-paragraph-2">Poor</p>
                     </div>
                   </div>
                 </div>
@@ -223,16 +368,14 @@
                 
               </div>
             </div>
+          </div>
+
+          <div class="col-lg-8 col-md-6 col-sm-12">
             <div class="section-box">
               <div class="container"> 
                 <div class="panel-white">
                   <div class="panel-head"> 
-                    <h5>Annual Performance Rating</h5><a class="menudrop" id="dropdownMenu2" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static"></a>
-                    <ul class="dropdown-menu dropdown-menu-light dropdown-menu-end" aria-labelledby="dropdownMenu2">
-                      <li><a class="dropdown-item active" href="#">Add new</a></li>
-                      <li><a class="dropdown-item" href="#">Settings</a></li>
-                      <li><a class="dropdown-item" href="#">Actions</a></li>
-                    </ul>
+                    <h5>Annual Performance Rating</h5>
                   </div>
                   <div class="panel-body"> 
                     <div id="chartdiv"></div>
@@ -240,20 +383,16 @@
                 </div>
               </div>
             </div>
-            
           </div>
-          <div class="col-xxl-4 col-xl-5 col-lg-5">
-            
+
+          
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="section-box">
               <div class="container"> 
                 <div class="panel-white">
                   <div class="panel-head"> 
-                    <h5>Queries by search</h5><a class="menudrop" id="dropdownMenu6" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static"></a>
-                    <ul class="dropdown-menu dropdown-menu-light dropdown-menu-end" aria-labelledby="dropdownMenu6">
-                      <li><a class="dropdown-item active" href="#">Add new</a></li>
-                      <li><a class="dropdown-item" href="#">Settings</a></li>
-                      <li><a class="dropdown-item" href="#">Actions</a></li>
-                    </ul>
+                    <h5>Queries by search</h5>
                   </div>
                   <div class="panel-body">
                     <div class="card-style-5 hover-up">
