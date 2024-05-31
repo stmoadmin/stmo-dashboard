@@ -78,7 +78,7 @@
                 <ul class="main-menu">
                   <li> <a class="dashboard2" href="index.html"><img src="assets/imgs/page/dashboard/dashboard.svg" alt="BPSU STMO"><span class="name">Home</span></a>
                   </li>
-                  <li> <a class="dashboard2" href="analysis.html"><img src="assets/imgs/page/dashboard/tasks.svg" alt="BPSU STMO"><span class="name">Analysis</span></a>
+                  <li> <a class="dashboard2" href="analysis-1stq.html"><img src="assets/imgs/page/dashboard/tasks.svg" alt="BPSU STMO"><span class="name">Analysis</span></a>
                   </li>
                   <li> <a class="dashboard2" href="calendar.html"><img src="assets/imgs/page/dashboard/cv-manage.svg" alt="BPSU STMO"><span class="name">Calendar</span></a>
                   </li>
@@ -108,7 +108,7 @@
           <ul class="main-menu">
             <li> <a class="dashboard2" href="index.html"><img src="assets/imgs/page/dashboard/dashboard.svg" alt="BPSU STMO"><span class="name">Home</span></a>
             </li>
-            <li> <a class="dashboard2" href="analysis.html"><img src="assets/imgs/page/dashboard/tasks.svg" alt="BPSU STMO"><span class="name">Analysis</span></a>
+            <li> <a class="dashboard2" href="analysis-1stq.html"><img src="assets/imgs/page/dashboard/tasks.svg" alt="BPSU STMO"><span class="name">Analysis</span></a>
             </li>
             <li> <a class="dashboard2" href="calendar.html"><img src="assets/imgs/page/dashboard/cv-manage.svg" alt="BPSU STMO"><span class="name">Calendar</span></a>
             </li>
@@ -132,7 +132,7 @@
             <div class="card-style-3">
               <div class="card-image"><img src="assets/imgs/page/dashboard/natalie.png" alt="BPSU STMO" style="border: 1px solid black; "></div>
               <div class="card-title" style="width: 100%!important;line-height: 15px;"> 
-                <h7>Prof. Natalie Jean S. Dinglasan</h7><br><span class="job-position">Head</span>
+                <h7>Prof. Natalie Jean S. Dinglasan</h7><br><span class="job-position">Director</span>
               </div>
             </div>
             <div class="card-style-3">
@@ -178,158 +178,11 @@
                   <div class="box-padding">               
                    
                       <div class="row">
-                        <div class="col-lg-8 col-md-6 col-sm-12 mx-auto">
+                        <div class="col-lg-8 col-md-6 col-sm-12 pb-250">
                           
                           
-                            <!-- Styles -->
-                                      <style>
-                                      #chartdiv {
-                                        width: 100%;
-                                        height: 500px;
-                                      }
-                                      </style>
-
-                                      <!-- Resources -->
-                                      <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-                                      <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
-                                      <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-
-                                      <!-- Chart code -->
-                                      <script>
-                                      am5.ready(function() {
-
-                                      // Create root element
-                                      // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-                                      var root = am5.Root.new("chartdiv");
-
-                                      // Set themes
-                                      // https://www.amcharts.com/docs/v5/concepts/themes/
-                                      root.setThemes([
-                                        am5themes_Animated.new(root)
-                                      ]);
-
-                                      // Create chart
-                                      // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
-                                      var chart = root.container.children.push(
-                                        am5percent.PieChart.new(root, {
-                                          endAngle: 270
-                                        })
-                                      );
-
-                                      // Create series
-                                      // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
-                                      var series = chart.series.push(
-                                        am5percent.PieSeries.new(root, {
-                                          valueField: "value",
-                                          categoryField: "category",
-                                          endAngle: 270
-                                        })
-                                      );
-
-                                      series.states.create("hidden", {
-                                        endAngle: -90
-                                      });
-
-                                      // Set data
-                                      // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
-                                      series.data.setAll([{
-                                        category: "Lithuania",
-                                        value: 501.9
-                                      }, {
-                                        category: "Czechia",
-                                        value: 301.9
-                                      }, {
-                                        category: "Ireland",
-                                        value: 201.1
-                                      }, {
-                                        category: "Germany",
-                                        value: 165.8
-                                      }, {
-                                        category: "Australia",
-                                        value: 139.9
-                                      }, {
-                                        category: "Austria",
-                                        value: 128.3
-                                      }, {
-                                        category: "UK",
-                                        value: 99
-                                      }]);
-
-                                      series.appear(1000, 100);
-
-                                      }); // end am5.ready()
-                                      </script>
-
-                                      <!-- HTML -->
-                                      <div id="chartdiv"></div>
-
-                                      <script type="text/javascript">
-                                        /* Imports */
-                                                import am5index from "@amcharts/amcharts5/index";
-                                                import am5percent from "@amcharts/amcharts5/percent";
-                                                import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
-
-                                                /* Chart code */
-                                                // Create root element
-                                                // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-                                                let root = am5.Root.new("chartdiv");
-
-                                                // Set themes
-                                                // https://www.amcharts.com/docs/v5/concepts/themes/
-                                                root.setThemes([
-                                                  am5themes_Animated.new(root)
-                                                ]);
-
-                                                // Create chart
-                                                // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
-                                                let chart = root.container.children.push(
-                                                  am5percent.PieChart.new(root, {
-                                                    endAngle: 270
-                                                  })
-                                                );
-
-                                                // Create series
-                                                // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
-                                                let series = chart.series.push(
-                                                  am5percent.PieSeries.new(root, {
-                                                    valueField: "value",
-                                                    categoryField: "category",
-                                                    endAngle: 270
-                                                  })
-                                                );
-
-                                                series.states.create("hidden", {
-                                                  endAngle: -90
-                                                });
-
-                                                // Set data
-                                                // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
-                                                series.data.setAll([{
-                                                  category: "Lithuania",
-                                                  value: 501.9
-                                                }, {
-                                                  category: "Czechia",
-                                                  value: 301.9
-                                                }, {
-                                                  category: "Ireland",
-                                                  value: 201.1
-                                                }, {
-                                                  category: "Germany",
-                                                  value: 165.8
-                                                }, {
-                                                  category: "Australia",
-                                                  value: 139.9
-                                                }, {
-                                                  category: "Austria",
-                                                  value: 128.3
-                                                }, {
-                                                  category: "UK",
-                                                  value: 99
-                                                }]);
-
-                                                series.appear(1000, 100);
-
-                                      </script>
+                           
+                                      
                         
                           
                         </div>

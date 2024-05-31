@@ -15,6 +15,74 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/template/favicon.ico">
     <link href="assets/css/style.css?version=4.1" rel="stylesheet">
     <title>Analysis - BPSU STMO </title>
+    <style>
+      table, td, th {  
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+      
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      th, td {
+        padding: 20px;
+      }
+      th {
+        font-weight: 500;
+      }
+      </style>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                  
+      <script type="text/javascript">
+      // Load google charts
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      
+      // Draw the chart and set the chart values
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+        ['Rating', 'Frequency'],
+        ['Outstanding (5)', 21.43],
+        ['Very Satisfactory (4)', 33.93],
+        ['Satisfactory (3)', 14.29],
+        ['Unsatisfactory (2)', 5.36],
+        ['Poor (1)', 25.00]
+      ]);
+      
+        // Optional; add a title and set the width and height of the chart
+        var options = {'title':'January', 'width':600, 'height':400};
+      
+        // Display the chart inside the <div> element with id="piechart"
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+      </script>
+      <script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        
+        // Draw the chart and set the chart values
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+          ['Rating', 'Frequency'],
+          ['Outstanding (5)', 16.36],
+          ['Very Satisfactory (4)', 34.55],
+          ['Satisfactory (3)', 14.55],
+          ['Unsatisfactory (2)', 7.27],
+          ['Poor (1)', 27.27]
+        ]);
+        
+          // Optional; add a title and set the width and height of the chart
+          var options = {'title':'February', 'width':600, 'height':400};
+        
+          // Display the chart inside the <div> element with id="piechart"
+          var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+          chart.draw(data, options);
+        }
+        </script>
   </head>
   <body>
     <div id="preloader-active">
@@ -75,7 +143,7 @@
                 <ul class="main-menu">
                   <li> <a class="dashboard2" href="index.html"><img src="assets/imgs/page/dashboard/dashboard.svg" alt="BPSU STMO"><span class="name">Home</span></a>
                   </li>
-                  <li> <a class="dashboard2 active" href="analysis.html"><img src="assets/imgs/page/dashboard/tasks.svg" alt="BPSU STMO"><span class="name">Analysis</span></a>
+                  <li> <a class="dashboard2 active" href="analysis-1stq.html"><img src="assets/imgs/page/dashboard/tasks.svg" alt="BPSU STMO"><span class="name">Analysis</span></a>
                   </li>
                   <li> <a class="dashboard2" href="calendar.html"><img src="assets/imgs/page/dashboard/cv-manage.svg" alt="BPSU STMO"><span class="name">Calendar</span></a>
                   </li>
@@ -105,7 +173,7 @@
           <ul class="main-menu">
             <li> <a class="dashboard2" href="index.html"><img src="assets/imgs/page/dashboard/dashboard.svg" alt="BPSU STMO"><span class="name">Home</span></a>
             </li>
-            <li> <a class="dashboard2 active" href="analysis.html"><img src="assets/imgs/page/dashboard/tasks.svg" alt="BPSU STMO"><span class="name">Analysis</span></a>
+            <li> <a class="dashboard2 active" href="analysis-1stq.html"><img src="assets/imgs/page/dashboard/tasks.svg" alt="BPSU STMO"><span class="name">Analysis</span></a>
             </li>
             <li> <a class="dashboard2" href="calendar.html"><img src="assets/imgs/page/dashboard/cv-manage.svg" alt="BPSU STMO"><span class="name">Calendar</span></a>
             </li>
@@ -129,7 +197,7 @@
             <div class="card-style-3">
               <div class="card-image"><img src="assets/imgs/page/dashboard/natalie.png" alt="BPSU STMO" style="border: 1px solid black; "></div>
               <div class="card-title" style="width: 100%!important;line-height: 15px;"> 
-                <h7>Prof. Natalie Jean S. Dinglasan</h7><br><span class="job-position">Head</span>
+                <h7>Prof. Natalie Jean S. Dinglasan</h7><br><span class="job-position">Director</span>
               </div>
             </div>
             <div class="card-style-3">
@@ -157,7 +225,11 @@
         <div class="box-heading">
           <div class="box-title"> 
             <h3 class="mb-35">Analysis</h3>
+
+            <h4 class="mb-35">1st Quarter Rating</h4>
+            <div><a class="btn btn-default icon-edit hover-up" href="analysis-1stq-jan.html">January</a></div><br>
           </div>
+          
           <div class="box-breadcrumb"> 
             <div class="breadcrumbs">
               <ul> 
@@ -167,26 +239,202 @@
             </div>
           </div>
         </div>
+
         <div class="row"> 
-          <div class="col-lg-12"> 
+          
+
+          <div class="col-xxl-6 col-xl-6 col-lg-6">
             <div class="section-box">
               <div class="container"> 
-                <div class="panel-white mb-30">
-                  <div class="box-padding">               
-                    <div class="login-register"> 
-                      <div class="row login-register-cover pb-250">
-                        <div class="col-lg-4 col-md-6 col-sm-12 mx-auto">
-                          
-                         
-                        </div>
-                      </div>
+                <div class="panel-white">
+                  <div class="panel-head"> 
+                    <h5>Frequency Distribution of Perfomance Ratings Among All CCDUs</h5>
+                  </div>
+                  <div class="">
+                    <div class="">
+
+                      <table>
+                        <tr>
+                          <th>RATING</th>
+                          <th>f</th>
+                          <th>f%</th>
+                        </tr>
+                        <tr>
+                          <th>Outstanding (5)</th>
+                          <td>12</td>
+                          <td>21.43%</td>
+                        </tr>
+                        <tr>
+                          <th>Very Satisfactory (4)</th>
+                          <td>19</td>
+                          <td>33.93%</td>
+                        </tr>
+                        <tr>
+                          <th>Satisfactory (3)</th>
+                          <td>8</td>
+                          <td>14.29%</td>
+                        </tr>
+                        <tr>
+                          <th>Unsatisfactory (2)</th>
+                          <td>3</td>
+                          <td>5.36%</td>
+                        </tr>
+                        <tr>
+                          <th>Poor (1)</th>
+                          <td>14</td>
+                          <td>25.00%</td>
+                        </tr>
+                      </table>
+
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <div class="col-xxl-6 col-xl-6 col-lg-6">
+            <div class="section-box">
+              <div class="container"> 
+                <div class="panel-white">
+                  <div class="panel-head"> 
+                    <h5>Submission Performance Summary for the month of January</h5>
+                  </div>
+                  <div class="">
+                    <table>
+                      <tr>
+                        <th>No. of CCDUs with January Deliverables</th>
+                        <td>56</td>
+                        <td>100%</td>
+                      </tr>
+                      <tr>
+                        <th>No. of CCDUs with Outstanding - Satisfactory Rating</th>
+                        <td>39</td>
+                        <td>69.64%</td>
+                      </tr>
+                      <tr>
+                        <th>No. of CCDUs with Unsatisfactory - Poor Rating</th>
+                        <td>17</td>
+                        <td>30.36%</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="panel-white">
+                  <div id="piechart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+
+
+        <div class="box-heading">
+          <div class="box-title"> 
+            <div><a class="btn btn-default icon-edit hover-up" href="analysis-1stq-feb.html">February</a></div><br>
+          </div>
+         </div> 
+
+         <div class="row"> 
+
+          <div class="col-xxl-6 col-xl-6 col-lg-6">
+            <div class="section-box">
+              <div class="container"> 
+                <div class="panel-white">
+                  <div class="panel-head"> 
+                    <h5>Frequency Distribution of Perfomance Ratings Among All CCDUs</h5>
+                  </div>
+                  <div class="">
+                    <div class="">
+
+                      <table>
+                        <tr>
+                          <th>RATING</th>
+                          <th>f</th>
+                          <th>f%</th>
+                        </tr>
+                        <tr>
+                          <th>Outstanding (5)</th>
+                          <td>9</td>
+                          <td>16.36%</td>
+                        </tr>
+                        <tr>
+                          <th>Very Satisfactory (4)</th>
+                          <td>19</td>
+                          <td>34.55%</td>
+                        </tr>
+                        <tr>
+                          <th>Satisfactory (3)</th>
+                          <td>8</td>
+                          <td>14.55%</td>
+                        </tr>
+                        <tr>
+                          <th>Unsatisfactory (2)</th>
+                          <td>4</td>
+                          <td>7.27%</td>
+                        </tr>
+                        <tr>
+                          <th>Poor (1)</th>
+                          <td>15</td>
+                          <td>27.27%</td>
+                        </tr>
+                      </table>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xxl-6 col-xl-6 col-lg-6">
+            <div class="section-box">
+              <div class="container"> 
+                <div class="panel-white">
+                  <div class="panel-head"> 
+                    <h5>Submission Performance Summary for the month of February</h5>
+                  </div>
+                  <div class="">
+                    <table>
+                      <tr>
+                        <th>No. of CCDUs with February Deliverables</th>
+                        <td>55</td>
+                        <td>100%</td>
+                      </tr>
+                      <tr>
+                        <th>No. of CCDUs with Outstanding - Satisfactory Rating</th>
+                        <td>36</td>
+                        <td>47.62%</td>
+                      </tr>
+                      <tr>
+                        <th>No. of CCDUs with Unsatisfactory - Poor Rating</th>
+                        <td>19</td>
+                        <td>52.38%</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="panel-white">
+                  <div id="piechart2"></div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          
+
+          
+
+          
+
+        </div>
+
+        
+
+        
         
         
         <footer class="footer mt-20">
