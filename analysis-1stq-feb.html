@@ -29,7 +29,149 @@
       .box-heading .box-title {
         width: 100%;
       }
-    </style>
+
+      table, td, th {  
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+      
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      th, td {
+        padding: 5px;
+      }
+      th {
+        font-weight: 500;
+      }
+
+
+      
+      </style>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                  
+      <script type="text/javascript">
+      // Load google charts
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      
+      // Draw the chart and set the chart values
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+        ['Rating', 'Frequency'],
+        ['Outstanding (5)', 11.11],
+        ['Very Satisfactory (4)', 27.78],
+        ['Satisfactory (3)', 16.67],
+        ['Unsatisfactory (2)', 0.00],
+        ['Poor (1)', 44.44]
+      ]);
+      
+        // Optional; add a title and set the width and height of the chart
+        var options = {'title':'February', 'width':600, 'height':400};
+      
+        // Display the chart inside the <div> element with id="piechart"
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_opres'));
+        chart.draw(data, options);
+      }
+      </script>
+      <script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        
+        // Draw the chart and set the chart values
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+          ['Rating', 'Frequency'],
+          ['Outstanding (5)', 16.36],
+          ['Very Satisfactory (4)', 34.55],
+          ['Satisfactory (3)', 14.55],
+          ['Unsatisfactory (2)', 7.27],
+          ['Poor (1)', 27.27]
+        ]);
+        
+          // Optional; add a title and set the width and height of the chart
+          var options = {'title':'February', 'width':600, 'height':400};
+        
+          // Display the chart inside the <div> element with id="piechart"
+          var chart = new google.visualization.PieChart(document.getElementById('piechart_vpaf'));
+          chart.draw(data, options);
+        }
+        </script>
+        <script type="text/javascript">
+          // Load google charts
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+          
+          // Draw the chart and set the chart values
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+            ['Rating', 'Frequency'],
+            ['Outstanding (5)', 16.36],
+            ['Very Satisfactory (4)', 34.55],
+            ['Satisfactory (3)', 14.55],
+            ['Unsatisfactory (2)', 7.27],
+            ['Poor (1)', 27.27]
+          ]);
+          
+            // Optional; add a title and set the width and height of the chart
+            var options = {'title':'February', 'width':600, 'height':400};
+          
+            // Display the chart inside the <div> element with id="piechart"
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_vpaa'));
+            chart.draw(data, options);
+          }
+          </script>
+          <script type="text/javascript">
+            // Load google charts
+            google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+            
+            // Draw the chart and set the chart values
+            function drawChart() {
+              var data = google.visualization.arrayToDataTable([
+              ['Rating', 'Frequency'],
+              ['Outstanding (5)', 16.36],
+              ['Very Satisfactory (4)', 34.55],
+              ['Satisfactory (3)', 14.55],
+              ['Unsatisfactory (2)', 7.27],
+              ['Poor (1)', 27.27]
+            ]);
+            
+              // Optional; add a title and set the width and height of the chart
+              var options = {'title':'February', 'width':600, 'height':400};
+            
+              // Display the chart inside the <div> element with id="piechart"
+              var chart = new google.visualization.PieChart(document.getElementById('piechart_vpret'));
+              chart.draw(data, options);
+            }
+            </script>
+            <script type="text/javascript">
+              // Load google charts
+              google.charts.load('current', {'packages':['corechart']});
+              google.charts.setOnLoadCallback(drawChart);
+              
+              // Draw the chart and set the chart values
+              function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                ['Rating', 'Frequency'],
+                ['Outstanding (5)', 16.36],
+                ['Very Satisfactory (4)', 34.55],
+                ['Satisfactory (3)', 14.55],
+                ['Unsatisfactory (2)', 7.27],
+                ['Poor (1)', 27.27]
+              ]);
+              
+                // Optional; add a title and set the width and height of the chart
+                var options = {'title':'February', 'width':600, 'height':400};
+              
+                // Display the chart inside the <div> element with id="piechart"
+                var chart = new google.visualization.PieChart(document.getElementById('piechart_colleges'));
+                chart.draw(data, options);
+              }
+              </script>
   </head>
   <body>
     <div id="preloader-active">
@@ -170,7 +312,7 @@
       </div>
       <div class="box-content">
         <div class="box-heading">
-          <div class="box-title"> 
+          <div class="box-title" style="width: 100%;"> 
             <h3 class="mb-35">Analysis</h3>
 
             <h4 class="mb-35">Summary Report and Analysis of PPA Monitoring for the month of February 2024</h4>
@@ -181,7 +323,7 @@
               <ul> 
                 <li> <a class="icon-home" href="index.html">Admin</a></li>
                 <li><span><a href="analysis-1stq.html">Analysis</a></span></li>
-                <li><span>1st Quarter - February</span></li>
+                <li><span>February-1st Quarter</span></li>
               </ul>
             </div>
           </div>
@@ -196,7 +338,7 @@
           <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-sm-12">
             <div class="section-box">
               <div class="container"> 
-                <div class="panel-white" style="border: 1px solid #F2F4FA">
+                <div class="panel-white" style="border: 1px solid rgb(255, 255, 255)">
                   
                   <div class="">
 
@@ -224,47 +366,1153 @@
           <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-8 col-sm-12">
             <div class="section-box">
               <div class="container"> 
-                <div class="panel-white mt-0">
-                  
+                <div class="panel-white">    
                   <div class="panel-body"> 
-                    
                     <section class="section-box">
-                      
-                        <div class="row">
-                          <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-8 col-sm-12">
                             <div class="content-single">
-                              <div class="tab-content">
-                                <div class="tab-pane fade show active" id="tab-opres" role="tabpanel" aria-labelledby="tab-opres">
-                                  <h4>OPRES</h4>
-                                  <p>Hello there! My name is Alan Walker. I am a graphic designer, and I&rsquo;m very passionate and dedicated to my work. With 20 years experience as a professional a graphic designer, I have acquired the skills and knowledge necessary to make your project a success.</p>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis illum fuga eveniet. Deleniti asperiores, commodi quae ipsum quas est itaque, ipsa, dolore beatae voluptates nemo blanditiis iste eius officia minus. Id nisi, consequuntur sunt impedit quidem, vitae mollitia!</p>
-                                </div>
-                                <div class="tab-pane fade" id="tab-vpaf" role="tabpanel" aria-labelledby="tab-vpaf">
-                                  <h4>vpaf</h4>
-                                  <p>Hello there! My name is Alan Walker. I am a graphic designer, and I&rsquo;m very passionate and dedicated to my work. With 20 years experience as a professional a graphic designer, I have acquired the skills and knowledge necessary to make your project a success.</p>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis illum fuga eveniet. Deleniti asperiores, commodi quae ipsum quas est itaque, ipsa, dolore beatae voluptates nemo blanditiis iste eius officia minus. Id nisi, consequuntur sunt impedit quidem, vitae mollitia!</p>
+                                <div class="tab-content">
+                                  <div class="tab-pane fade show active" id="tab-opres" role="tabpanel" aria-labelledby="tab-opres">
+                                    <h4 class="mb-30">OFFICE OF THE PRESIDENT</h4>
+  
+                                    <div class="row">
+                                      <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                        <div class="section-box">
+                                          <div class="container mb-10"> 
+                                            <div class="mb-10"> 
+                                              <h6>SUBMISSION PERFORMANCE SUMMARY</h6>
+                                            </div>
+                                            <table>
+                                              <tr>
+                                                <th>No. of DUs with January Deliverables</th>
+                                                <td>18</td>
+                                                <td>100%</td>
+                                              </tr>
+                                              <tr>
+                                                <th>No. of DUs with Outstanding - Satisfactory<br> Submission Performance</th>
+                                                <td>10</td>
+                                                <td>55.56%</td>
+                                              </tr>
+                                              <tr>
+                                                <th>No. of DUs with Unsatisfactory - Poor<br>Submission Performance</th>
+                                                <td>8</td>
+                                                <td>44.44%</td>
+                                              </tr>
+                                            </table>
+                                          </div>
+                                          <div class="container"> 
+                                              <div class="mb-15"> 
+                                                <h6>FREQUENCY DISTRIBUTION OF PERFORMANCE RATINGS AMONG (PRES) DUs</h6>
+                                              </div>
+                                                  <table>
+                                                    <tr>
+                                                      <th>RATING</th>
+                                                      <th>f</th>
+                                                      <th>f%</th>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Outstanding (5)</th>
+                                                      <td>2</td>
+                                                      <td>11.11%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Very Satisfactory (4)</th>
+                                                      <td>5</td>
+                                                      <td>27.78%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Satisfactory (3)</th>
+                                                      <td>3</td>
+                                                      <td>16.67%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Unsatisfactory (2)</th>
+                                                      <td>0</td>
+                                                      <td>0.00%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Poor (1)</th>
+                                                      <td>8</td>
+                                                      <td>44.44%</td>
+                                                    </tr>
+                                                  </table>
+                                            </div>
+
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <div class="section-box">
+                                              <div id="piechart_opres"></div>
+                                        </div>
+                                      </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="section-box">
+                                          <div class="container mb-20 mt-40"> 
+                                            <div class="mb-20 text-center"> 
+                                              <h5>SUMMARY REPORT AND ANALYSIS PF PPA MONITORING FOR THE MONTH OF JANUARY 2024</h5>
+                                            </div>
+                                            <table>
+                                              <tr>
+                                                <th>DU</th>
+                                                <th>No. of PPAs for the Month</th>
+                                                <th>No. of Submitted POA per Milestone</th>
+                                                <th>Common Comments on Submitted POAs</th>
+                                                <th>Quality Rating of Submission</th>
+                                                <th>Timelines Rating of Submission</th>
+                                                <th>Submission Compliance Score</th>
+                                              </tr>
+                                              <tr>
+                                                <th>PMS</th>
+                                                <td>N/A</td>
+                                                <td></td>
+                                                <td>No PPA(s) for the month of January</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              
+                                            </table>
+                                          </div>
+
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                    
+                                   
+                                  
                                   </div>
-                                <div class="tab-pane fade" id="tab-vpaa" role="tabpanel" aria-labelledby="tab-vpaa">
-                                  <h4>vpaa</h4>
-                                  <p>Hello there! My name is Alan Walker. I am a graphic designer, and I&rsquo;m very passionate and dedicated to my work. With 20 years experience as a professional a graphic designer, I have acquired the skills and knowledge necessary to make your project a success.</p>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis illum fuga eveniet. Deleniti asperiores, commodi quae ipsum quas est itaque, ipsa, dolore beatae voluptates nemo blanditiis iste eius officia minus. Id nisi, consequuntur sunt impedit quidem, vitae mollitia!</p>
+  
+                                  <div class="tab-pane fade" id="tab-vpaf" role="tabpanel" aria-labelledby="tab-vpaf">
+                                  
+                                    <h4 class="mb-30">OFFICE OF THE PRESIDENT OF ADMINISTRATION AND FINANCE</h4>
+  
+                                    <div class="row">
+                                      <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                        <div class="section-box">
+                                          <div class="container mb-10"> 
+                                            <div class="mb-10"> 
+                                              <h6>SUBMISSION PERFORMANCE SUMMARY</h6>
+                                            </div>
+                                            <table>
+                                              <tr>
+                                                <th>No. of DUs with January Deliverables</th>
+                                                <td>18</td>
+                                                <td>100%</td>
+                                              </tr>
+                                              <tr>
+                                                <th>No. of DUs with Outstanding - Satisfactory<br> Submission Performance</th>
+                                                <td>10</td>
+                                                <td>55.56%</td>
+                                              </tr>
+                                              <tr>
+                                                <th>No. of DUs with Unsatisfactory - Poor<br>Submission Performance</th>
+                                                <td>8</td>
+                                                <td>44.44%</td>
+                                              </tr>
+                                            </table>
+                                          </div>
+                                          <div class="container"> 
+                                              <div class="mb-15"> 
+                                                <h6>FREQUENCY DISTRIBUTION OF PERFORMANCE RATINGS AMONG (PRES) DUs</h6>
+                                              </div>
+                                                  <table>
+                                                    <tr>
+                                                      <th>RATING</th>
+                                                      <th>f</th>
+                                                      <th>f%</th>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Outstanding (5)</th>
+                                                      <td>2</td>
+                                                      <td>11.11%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Very Satisfactory (4)</th>
+                                                      <td>5</td>
+                                                      <td>27.78%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Satisfactory (3)</th>
+                                                      <td>3</td>
+                                                      <td>16.67%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Unsatisfactory (2)</th>
+                                                      <td>0</td>
+                                                      <td>0.00%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Poor (1)</th>
+                                                      <td>8</td>
+                                                      <td>44.44%</td>
+                                                    </tr>
+                                                  </table>
+                                            </div>
+
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <div class="section-box">
+                                              <div id="piechart_vpaf"></div>
+                                        </div>
+                                      </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="section-box">
+                                          <div class="container mb-20 mt-40"> 
+                                            <div class="mb-20 text-center"> 
+                                              <h5>SUMMARY REPORT AND ANALYSIS PF PPA MONITORING FOR THE MONTH OF JANUARY 2024</h5>
+                                            </div>
+                                            <table>
+                                              <tr>
+                                                <th>DU</th>
+                                                <th>No. of PPAs for the Month</th>
+                                                <th>No. of Submitted POA per Milestone</th>
+                                                <th>Common Comments on Submitted POAs</th>
+                                                <th>Quality Rating of Submission</th>
+                                                <th>Timelines Rating of Submission</th>
+                                                <th>Submission Compliance Score</th>
+                                              </tr>
+                                              <tr>
+                                                <th>HRDM</th>
+                                                <td>N/A</td>
+                                                <td></td>
+                                                <td>No PPA(s) for the month of January</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              
+                                              
+                                            </table>
+                                          </div>
+
+                                        </div>
+                                      </div>
+                                    </div>
+                                  
+                                  </div>
+  
+                                  <div class="tab-pane fade" id="tab-vpaa" role="tabpanel" aria-labelledby="tab-vpaa">
+                                  
+                                    <h4 class="mb-30">OFFICE OF THE VICE PRESIDENT OF ACADEMIC AFFAIRS</h4>
+  
+                                    <div class="row">
+                                      <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                        <div class="section-box">
+                                          <div class="container mb-10"> 
+                                            <div class="mb-10"> 
+                                              <h6>SUBMISSION PERFORMANCE SUMMARY</h6>
+                                            </div>
+                                            <table>
+                                              <tr>
+                                                <th>No. of DUs with January Deliverables</th>
+                                                <td>18</td>
+                                                <td>100%</td>
+                                              </tr>
+                                              <tr>
+                                                <th>No. of DUs with Outstanding - Satisfactory<br> Submission Performance</th>
+                                                <td>10</td>
+                                                <td>55.56%</td>
+                                              </tr>
+                                              <tr>
+                                                <th>No. of DUs with Unsatisfactory - Poor<br>Submission Performance</th>
+                                                <td>8</td>
+                                                <td>44.44%</td>
+                                              </tr>
+                                            </table>
+                                          </div>
+                                          <div class="container"> 
+                                              <div class="mb-15"> 
+                                                <h6>FREQUENCY DISTRIBUTION OF PERFORMANCE RATINGS AMONG (PRES) DUs</h6>
+                                              </div>
+                                                  <table>
+                                                    <tr>
+                                                      <th>RATING</th>
+                                                      <th>f</th>
+                                                      <th>f%</th>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Outstanding (5)</th>
+                                                      <td>2</td>
+                                                      <td>11.11%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Very Satisfactory (4)</th>
+                                                      <td>5</td>
+                                                      <td>27.78%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Satisfactory (3)</th>
+                                                      <td>3</td>
+                                                      <td>16.67%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Unsatisfactory (2)</th>
+                                                      <td>0</td>
+                                                      <td>0.00%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Poor (1)</th>
+                                                      <td>8</td>
+                                                      <td>44.44%</td>
+                                                    </tr>
+                                                  </table>
+                                            </div>
+
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <div class="section-box">
+                                              <div id="piechart_vpaa"></div>
+                                        </div>
+                                      </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="section-box">
+                                          <div class="container mb-20 mt-40"> 
+                                            <div class="mb-20 text-center"> 
+                                              <h5>SUMMARY REPORT AND ANALYSIS PF PPA MONITORING FOR THE MONTH OF JANUARY 2024</h5>
+                                            </div>
+                                            <table>
+                                              <tr>
+                                                <th>DU</th>
+                                                <th>No. of PPAs for the Month</th>
+                                                <th>No. of Submitted POA per Milestone</th>
+                                                <th>Common Comments on Submitted POAs</th>
+                                                <th>Quality Rating of Submission</th>
+                                                <th>Timelines Rating of Submission</th>
+                                                <th>Submission Compliance Score</th>
+                                              </tr>
+                                              <tr>
+                                                <th>STDV</th>
+                                                <td>N/A</td>
+                                                <td></td>
+                                                <td>No PPA(s) for the month of January</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              
+                                              
+                                            </table>
+                                          </div>
+
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                  </div>
+  
+                                  <div class="tab-pane fade" id="tab-vpret" role="tabpanel" aria-labelledby="tab-vpret">
+                                  
+                                    <h4 class="mb-30">OFFICE OF THE VICE PRESIDENT OF RESEARCH EXTENSIONS AND TRAINING SERVICES</h4>
+  
+                                    <div class="row">
+                                      <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                        <div class="section-box">
+                                          <div class="container mb-10"> 
+                                            <div class="mb-10"> 
+                                              <h6>SUBMISSION PERFORMANCE SUMMARY</h6>
+                                            </div>
+                                            <table>
+                                              <tr>
+                                                <th>No. of DUs with January Deliverables</th>
+                                                <td>18</td>
+                                                <td>100%</td>
+                                              </tr>
+                                              <tr>
+                                                <th>No. of DUs with Outstanding - Satisfactory<br> Submission Performance</th>
+                                                <td>10</td>
+                                                <td>55.56%</td>
+                                              </tr>
+                                              <tr>
+                                                <th>No. of DUs with Unsatisfactory - Poor<br>Submission Performance</th>
+                                                <td>8</td>
+                                                <td>44.44%</td>
+                                              </tr>
+                                            </table>
+                                          </div>
+                                          <div class="container"> 
+                                              <div class="mb-15"> 
+                                                <h6>FREQUENCY DISTRIBUTION OF PERFORMANCE RATINGS AMONG (PRES) DUs</h6>
+                                              </div>
+                                                  <table>
+                                                    <tr>
+                                                      <th>RATING</th>
+                                                      <th>f</th>
+                                                      <th>f%</th>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Outstanding (5)</th>
+                                                      <td>2</td>
+                                                      <td>11.11%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Very Satisfactory (4)</th>
+                                                      <td>5</td>
+                                                      <td>27.78%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Satisfactory (3)</th>
+                                                      <td>3</td>
+                                                      <td>16.67%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Unsatisfactory (2)</th>
+                                                      <td>0</td>
+                                                      <td>0.00%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Poor (1)</th>
+                                                      <td>8</td>
+                                                      <td>44.44%</td>
+                                                    </tr>
+                                                  </table>
+                                            </div>
+
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <div class="section-box">
+                                              <div id="piechart_vpret"></div>
+                                        </div>
+                                      </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="section-box">
+                                          <div class="container mb-20 mt-40"> 
+                                            <div class="mb-20 text-center"> 
+                                              <h5>SUMMARY REPORT AND ANALYSIS PF PPA MONITORING FOR THE MONTH OF JANUARY 2024</h5>
+                                            </div>
+                                            <table>
+                                              <tr>
+                                                <th>DU</th>
+                                                <th>No. of PPAs for the Month</th>
+                                                <th>No. of Submitted POA per Milestone</th>
+                                                <th>Common Comments on Submitted POAs</th>
+                                                <th>Quality Rating of Submission</th>
+                                                <th>Timelines Rating of Submission</th>
+                                                <th>Submission Compliance Score</th>
+                                              </tr>
+                                              <tr>
+                                                <th>ITSO</th>
+                                                <td>N/A</td>
+                                                <td></td>
+                                                <td>No PPA(s) for the month of January</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              
+                                              
+                                            </table>
+                                          </div>
+
+                                        </div>
+                                      </div>
+                                    </div>
+                                  
+                                  </div>
+  
+                                  <div class="tab-pane fade" id="tab-colleges" role="tabpanel" aria-labelledby="tab-colleges">
+                                    
+                                    <h4 class="mb-30">COLLEGES AND CAMPUSES</h4>
+  
+                                    <div class="row">
+                                      <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                        <div class="section-box">
+                                          <div class="container mb-10"> 
+                                            <div class="mb-10"> 
+                                              <h6>SUBMISSION PERFORMANCE SUMMARY</h6>
+                                            </div>
+                                            <table>
+                                              <tr>
+                                                <th>No. of DUs with January Deliverables</th>
+                                                <td>18</td>
+                                                <td>100%</td>
+                                              </tr>
+                                              <tr>
+                                                <th>No. of DUs with Outstanding - Satisfactory<br> Submission Performance</th>
+                                                <td>10</td>
+                                                <td>55.56%</td>
+                                              </tr>
+                                              <tr>
+                                                <th>No. of DUs with Unsatisfactory - Poor<br>Submission Performance</th>
+                                                <td>8</td>
+                                                <td>44.44%</td>
+                                              </tr>
+                                            </table>
+                                          </div>
+                                          <div class="container"> 
+                                              <div class="mb-15"> 
+                                                <h6>FREQUENCY DISTRIBUTION OF PERFORMANCE RATINGS AMONG (PRES) DUs</h6>
+                                              </div>
+                                                  <table>
+                                                    <tr>
+                                                      <th>RATING</th>
+                                                      <th>f</th>
+                                                      <th>f%</th>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Outstanding (5)</th>
+                                                      <td>2</td>
+                                                      <td>11.11%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Very Satisfactory (4)</th>
+                                                      <td>5</td>
+                                                      <td>27.78%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Satisfactory (3)</th>
+                                                      <td>3</td>
+                                                      <td>16.67%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Unsatisfactory (2)</th>
+                                                      <td>0</td>
+                                                      <td>0.00%</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <th>Poor (1)</th>
+                                                      <td>8</td>
+                                                      <td>44.44%</td>
+                                                    </tr>
+                                                  </table>
+                                            </div>
+
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <div class="section-box">
+                                              <div id="piechart_colleges"></div>
+                                        </div>
+                                      </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="section-box">
+                                          <div class="container mb-20 mt-40"> 
+                                            <div class="mb-20 text-center"> 
+                                              <h5>SUMMARY REPORT AND ANALYSIS PF PPA MONITORING FOR THE MONTH OF JANUARY 2024</h5>
+                                            </div>
+                                            <table>
+                                              <tr>
+                                                <th>DU</th>
+                                                <th>No. of PPAs for the Month</th>
+                                                <th>No. of Submitted POA per Milestone</th>
+                                                <th>Common Comments on Submitted POAs</th>
+                                                <th>Quality Rating of Submission</th>
+                                                <th>Timelines Rating of Submission</th>
+                                                <th>Submission Compliance Score</th>
+                                              </tr>
+                                              <tr>
+                                                <th>ABUCAY CAMPUS</th>
+                                                <td>N/A</td>
+                                                <td></td>
+                                                <td>No PPA(s) for the month of January</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              <tr>
+                                                <th>SUBR</th>
+                                                <td>1</td>
+                                                <td>0/1</td>
+                                                <td>No Submission</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td style="text-align: center; background-color: #F2F4FA;">1.00</td>
+                                              </tr>
+                                              
+                                              
+                                            </table>
+                                          </div>
+
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                  </div>
+  
                                 </div>
-                                <div class="tab-pane fade" id="tab-vpret" role="tabpanel" aria-labelledby="tab-vpret">
-                                  <h4>vpret</h4>
-                                  <p>Hello there! My name is Alan Walker. I am a graphic designer, and I&rsquo;m very passionate and dedicated to my work. With 20 years experience as a professional a graphic designer, I have acquired the skills and knowledge necessary to make your project a success.</p>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis illum fuga eveniet. Deleniti asperiores, commodi quae ipsum quas est itaque, ipsa, dolore beatae voluptates nemo blanditiis iste eius officia minus. Id nisi, consequuntur sunt impedit quidem, vitae mollitia!</p>
-                                </div>
-                                <div class="tab-pane fade" id="tab-colleges" role="tabpanel" aria-labelledby="tab-colleges">
-                                  <h4>colleges</h4>
-                                  <p>Hello there! My name is Alan Walker. I am a graphic designer, and I&rsquo;m very passionate and dedicated to my work. With 20 years experience as a professional a graphic designer, I have acquired the skills and knowledge necessary to make your project a success.</p>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis illum fuga eveniet. Deleniti asperiores, commodi quae ipsum quas est itaque, ipsa, dolore beatae voluptates nemo blanditiis iste eius officia minus. Id nisi, consequuntur sunt impedit quidem, vitae mollitia!</p>
-                                </div>
-                              </div>
+                              
+
                             </div>
                             
-                          </div>
                           
-                        </div>
+                          
+                        
                       
                     </section>
 
